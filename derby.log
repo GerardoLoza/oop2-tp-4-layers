@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Jun 22 16:38:27 ART 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-0197-9926-3221-000006a12c60 
+on database directory C:\Users\lozag\IdeaProjects\oop2-tp-4-layers\radiocompetition with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528 
+Loaded from file:/C:/Users/lozag/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Microsoft
+java.runtime.version=21.0.6+7-LTS
+user.dir=C:\Users\lozag\IdeaProjects\oop2-tp-4-layers
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

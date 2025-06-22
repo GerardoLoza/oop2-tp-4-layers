@@ -1,0 +1,2 @@
+loza, gera, 1111-111111, lozagerardo1@gmail.com, 1
+prueba, prueba, 1111-111111, prueba@gmail.com, 3
