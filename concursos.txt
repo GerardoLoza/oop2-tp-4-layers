@@ -1,3 +1,10 @@
 1, Concurso Rock Nacional, 2025/05/01, 2025/07/20
 2, Concurso Pop Internacional, 2025/05/01, 2025/07/20
 3, Concurso Jazz Clásico, 2025/05/01, 2025/07/20
+1, Concurso de Verano 2024, 2024/01/01, 2024/12/31
+2, Concurso de Invierno, 2024/06/01, 2024/08/31
+3, Gran Premio Musical, 2024/03/15, 2024/09/30
+4, Concurso Juvenil, 2024/07/01, 2024/07/31
+5, Festival de Talentos, 2024/05/01, 2024/11/30
+6, Concurso Vencido, 2023/01/01, 2023/12/31
+7, Concurso Futuro, 2025/01/01, 2025/12/31

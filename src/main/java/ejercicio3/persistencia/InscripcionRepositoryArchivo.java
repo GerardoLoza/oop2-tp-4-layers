@@ -1,5 +1,6 @@
 package ejercicio3.persistencia;
 
+import ejercicio3.log.Log;
 import ejercicio3.modelo.Inscripcion;
 import ejercicio3.modelo.InscripcionRepository;
 
@@ -14,6 +15,7 @@ public class InscripcionRepositoryArchivo implements InscripcionRepository {
         this.rutaArchivo = rutaArchivo;
     }
 
+    @Log
     @Override
     public void saveInscription(Inscripcion inscripcion) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(rutaArchivo, true))) {
@@ -45,7 +47,6 @@ public class InscripcionRepositoryArchivo implements InscripcionRepository {
                 }
             }
         } catch (FileNotFoundException e) {
-            // Archivo no existe aún, retornar lista vacía
             return inscripciones;
         } catch (IOException e) {
             throw new RuntimeException("Error al leer el archivo de inscripciones: " + e.getMessage(), e);
@@ -68,7 +69,6 @@ public class InscripcionRepositoryArchivo implements InscripcionRepository {
             String email = partes[3].trim();
             int idConcurso = Integer.parseInt(partes[4].trim());
 
-            // DNI no se guarda en el archivo según el formato especificado
             return new Inscripcion(apellido, nombre, "00000000", telefono, email, idConcurso);
         } catch (Exception e) {
             System.err.println("Error al parsear línea: " + linea + " - " + e.getMessage());
@@ -76,4 +76,3 @@ public class InscripcionRepositoryArchivo implements InscripcionRepository {
         }
     }
 }
-

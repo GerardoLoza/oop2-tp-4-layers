@@ -1,2 +1,8 @@
 loza, gera, 1111-111111, lozagerardo1@gmail.com, 1
 prueba, prueba, 1111-111111, prueba@gmail.com, 3
+dss, gerardo, 1111-111111, blabla@gmail.com, 2
+García, María, 1234-567890, maria.garcia@email.com, 1
+López, Juan, 9876-543210, juan.lopez@email.com, 1
+Martínez, Ana, 1122-334455, ana.martinez@email.com, 2
+Rodríguez, Carlos, 5566-778899, carlos.rodriguez@email.com, 3
+feefef, geerer, 1111-111111, blabla@gmail.com, 1

@@ -1,5 +1,7 @@
 package ejercicio3.persistencia;
 
+
+import ejercicio3.log.Log;
 import ejercicio3.modelo.Concurso;
 import ejercicio3.modelo.ConcursoRepository;
 
@@ -17,6 +19,7 @@ public class ConcursoRepositoryArchivo implements ConcursoRepository {
         this.rutaArchivo = rutaArchivo;
     }
 
+    @Log
     @Override
     public List<Concurso> todosLosConcursos() {
         List<Concurso> todos = obtenerTodos();
@@ -75,4 +78,3 @@ public class ConcursoRepositoryArchivo implements ConcursoRepository {
         }
     }
 }
-
