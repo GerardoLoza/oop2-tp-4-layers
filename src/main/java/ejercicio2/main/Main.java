@@ -4,7 +4,7 @@ import ejercicio2.modelo.EmpleadoRepository;
 import ejercicio2.modelo.EmailService;
 import ejercicio2.modelo.ServicioCumple;
 import ejercicio2.persistencia.EmpleadoRepositoryArchivo;
-import ejercicio2.servicios.EmailServiceMailTrap;
+import ejercicio2.servicios.EmailServiceMailTrap1;
 import ejercicio2.modelo.ServicioCumpleDefault;
 
 public class Main {
@@ -20,7 +20,7 @@ public class Main {
 
             // Inyección de dependencias
             EmpleadoRepository empleadoRepository = new EmpleadoRepositoryArchivo(rutaArchivo);
-            EmailService emailService = new EmailServiceMailTrap(
+            EmailService emailService = new EmailServiceMailTrap1(
                     mailTrapHost, mailTrapPort, mailTrapUser, mailTrapPassword, emailRemitente
             );
 

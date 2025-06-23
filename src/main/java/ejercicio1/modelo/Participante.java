@@ -4,15 +4,18 @@ public class Participante {
     private String nombre;
     private String telefono;
     private String region;
+    private String email;
 
-    public Participante(String nombre, String telefono, String region) {
+    public Participante(String nombre, String telefono, String region, String email) {
         validarNombre(nombre);
         validarTelefono(telefono);
         validarRegion(region);
+        validarEmail(email);
 
         this.nombre = nombre;
         this.telefono = telefono;
         this.region = region;
+        this.email = email;
     }
 
     private void validarNombre(String nombre) {
@@ -42,7 +45,17 @@ public class Participante {
         }
     }
 
-    // Getters
+    private void validarEmail(String email) {
+        if (email == null || email.trim().isEmpty()) {
+            throw new IllegalArgumentException("Debe cargar un email");
+        }
+
+        String regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        if (!email.matches(regex)) {
+            throw new IllegalArgumentException("El email debe tener un formato válido");
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -55,12 +68,17 @@ public class Participante {
         return region;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public String toString() {
         return "Participante{" +
                 "nombre='" + nombre + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", region='" + region + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

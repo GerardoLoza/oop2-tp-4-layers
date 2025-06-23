@@ -21,11 +21,12 @@ public class ParticipanteRepositoryJDBC implements ParticipanteRepository {
     @Override
     public void guardar(Participante participante) throws Exception {
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            String sql = "insert into participantes(nombre, telefono, region) values(?,?,?)";
+            String sql = "insert into participantes(nombre, telefono, region, email) values(?,?,?,?)";
             try (PreparedStatement st = connection.prepareStatement(sql)) {
                 st.setString(1, participante.getNombre());
                 st.setString(2, participante.getTelefono());
                 st.setString(3, participante.getRegion());
+                st.setString(4, participante.getEmail());
                 st.executeUpdate();
             }
         } catch (SQLException e) {

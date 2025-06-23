@@ -12,6 +12,7 @@ public class AgregarParticipanteFrame extends JFrame implements ParticipanteView
     private JTextField nombre;
     private JTextField telefono;
     private JTextField region;
+    private JTextField email;
 
     public AgregarParticipanteFrame(ParticipanteService participanteService) {
         this.participanteService = participanteService;
@@ -20,16 +21,18 @@ public class AgregarParticipanteFrame extends JFrame implements ParticipanteView
 
     private void setupUIComponents() {
         setTitle("Add Participant");
-        setSize(400, 400);
+        setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.nombre = new JTextField(10);
         this.telefono = new JTextField(10);
         this.region = new JTextField(10);
+        this.email = new JTextField(10);
 
         this.nombre.setText("");
         this.telefono.setText("");
         this.region.setText("China");
+        this.email.setText("");
 
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -41,6 +44,8 @@ public class AgregarParticipanteFrame extends JFrame implements ParticipanteView
         contentPane.add(telefono);
         contentPane.add(new JLabel("Region: "));
         contentPane.add(region);
+        contentPane.add(new JLabel("Email: "));
+        contentPane.add(email);
 
         JButton botonCargar = new JButton("Cargar");
         botonCargar.addActionListener(new ActionListener() {
@@ -60,7 +65,8 @@ public class AgregarParticipanteFrame extends JFrame implements ParticipanteView
             participanteService.agregarParticipante(
                     nombre.getText().trim(),
                     telefono.getText().trim(),
-                    region.getText().trim()
+                    region.getText().trim(),
+                    email.getText().trim()
             );
             dispose();
         } catch (IllegalArgumentException e) {

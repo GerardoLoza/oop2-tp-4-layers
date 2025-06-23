@@ -1,6 +1,6 @@
-package ejercicio2.servicios;
+package ejercicio1.servicios;
 
-import ejercicio2.modelo.EmailService;
+import ejercicio1.modelo.EmailService;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
